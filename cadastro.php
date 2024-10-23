@@ -1,21 +1,21 @@
 <?php
-// Configurações do banco de dados
+
 $servername = "localhost";
-$username = "root"; // Substitua pelo seu nome de usuário do MySQL
-$password = ""; // Substitua pela sua senha do MySQL
+$username = "root"; 
+$password = ""; 
 $dbname = "patassolidarias";
 
-// Conexão com o banco de dados
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verifica se a conexão foi bem-sucedida
+
 if ($conn->connect_error) {
     die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Verifica se o formulário foi enviado
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebendo os dados do formulário
+
     $nome = $_POST['name'];
     $data_nascimento = $_POST['data_nascimento'];
     $endereco = $_POST['endereco'];
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
 
-    // Inserindo os dados no banco de dados
+    
     $sql = "INSERT INTO pessoa (nome,  data_nascimento, endereco, cep, cpf, email, telefone, senha) 
             VALUES ('$nome','$data_nascimento', '$endereco', '$cep', '$cpf', '$email', '$telefone','$senha')";
 
@@ -36,6 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Fechando a conexão
+
 $conn->close();
 ?>
