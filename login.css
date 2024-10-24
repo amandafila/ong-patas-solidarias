@@ -124,3 +124,11 @@ header{
     font-family: "Montserrat";
     font-weight: 500;  
 }
+
+.login_botao{
+    margin-top: 17px;
+    margin-left: 5px;
+    border-radius: 20px;
+    height: 40px;
+    font-family: "Montserrat"
+}
