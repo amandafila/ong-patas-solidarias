@@ -16,12 +16,17 @@
         <div class="titulo">PATAS SOLIDARIAS</div>
         <a class="link_menu" href="https://wordmark.it/"> Menu principal </a></div>
     </header>
-    <div class="login_texto">Login</div>
-    <div class="quadrado_login">
-        <div class="texto_usuario"> Usuário <br><input type="text" class="usuario"> </div>
-        <br>
-        <div class="texto_senha"> Senha <br> <input type="password" class="senha_login"> </div>
-    </div>
+    <form action="login.php" method="POST">
+        <div class="login_texto">Login</div>
+        <div class="quadrado_login">
+            <div class="texto_usuario"> Usuário <br><input type="text" name="email" class="usuario"> </div>
+            <br>
+            <div class="texto_senha"> Senha <br> <input type="password" name="senha" class="senha_login"> </div>
+            <input type="submit" value="Fazer login" class="login_botao">
+        </div>
+        
+    </form>
+    
     <div class="texto_cadastro">Usuário novo?<a href="cadastro.html">Faça seu cadastro!</a> </div>
 </body>
 </html>
