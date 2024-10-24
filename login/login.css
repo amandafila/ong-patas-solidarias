@@ -80,11 +80,10 @@ header{
     padding: 20px;
     border: 3px solid var(--laranja);
     color:#4a4274;
-    /* text-align: center; */
 }
 
 .texto_usuario{
-    margin-top: 12%;
+    margin-top: 9%;
     float: left;
 }
 
@@ -126,9 +125,17 @@ header{
 }
 
 .login_botao{
-    margin-top: 17px;
+    margin-top: 20px;
     margin-left: 5px;
     border-radius: 20px;
     height: 40px;
-    font-family: "Montserrat"
+    font-family: "Montserrat";
+    background-color: var(--laranja);
+    color: var(--bege);
+}
+
+:hover.login_botao{
+    background-color: var(--bege);
+    color: var(--azul_marinho);
+    transition: background-color 0.7s ease, transform 0.5s ease;
 }
