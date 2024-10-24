@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --amarelo: #f4d06f;
+    --laranja: #ff8811;
+    --verde: #9dd9d2;
+    --bege: #fff8f0;
+    --azul_marinho: #392f5a;
+}
+
+body{
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+    color: var(--azul_marinho);
+} 
+
+header{
+    display: flex;
+    background-color: var(--verde);
+    height: 120px;
+    padding: 0px;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 35px;
+    /* font-size: 25px; */
+    font-family: 'Playfair Display  ';
+    color: var(--azul_marinho);
+}
+
+.link_menu{
+    font-size: 16px;
+    background-color: var(--verde);
+    text-decoration: none;
+    border: #392f5a;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 10px;
+    color: var(--azul_marinho);
+}
+
+:hover.link_menu{
+    background-color: var(--bege);
+    color: var(--azul_marinho);
+    /* transition-delay: 0.5s; */
+    transition: background-color 0.7s ease, transform 0.5s ease
+}
+
+.titulo{
+    background-color: var(--verde);
+    font-size: 28px;
+    align-items: right;
+    font-style: normal;
+}
+
+.botao_hamburguer{
+    background-color: var(--verde);
+}
+
+.quadrado{
+    width: 600px;                  /* Largura da caixa */
+    padding: 20px;                 /* Espaço interno */
+    border: 2px solid #ccc;        /* Borda da caixa */
+    border-radius: 10px;           /* Arredondamento dos cantos */
+    background-color: #f9f9f9;     /* Cor de fundo */                  /* Cor do texto */
+    font-size: 16px;               /* Tamanho da fonte */
+    text-align: center;/* Alinha o texto ao centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    /* margin: 20px  auto;    */
+    display: flexbox;
+    background-color: var(--cinza);
+    font-family: "Montserrat";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+}
+
+.sucesso{
+    color: var(--laranja);
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.quadrado a{
+    font-size: 16px;
+    background-color: var(--amarelo);
+    text-decoration: none;
+    border: #392f5a;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 10px;
+    color: var(--azul_marinho);
+}
+
+:hover.quadrado a{
+    background-color: #be9d43;
+    color: var(--bege);
+    /* transition-delay: 0.5s; */
+    transition: background-color 0.7s ease, transform 0.5s ease
+}
