@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --amarelo: #f4d06f;
+    --laranja: #ff8811;
+    --verde: #9dd9d2;
+    --bege: #fff8f0;
+    --azul_marinho: #392f5a;
+}
+
+body{
+    background-color: var(--bege);
+    margin: 0;
+    padding: 0;
+    color: var(--azul_marinho);
+} 
+
+header{
+    display: flex;
+    background-color: var(--verde);
+    height: 120px;
+    padding: 0px;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 35px;
+    /* font-size: 25px; */
+    font-family: 'Playfair Display  ';
+    color: var(--azul_marinho);
+}
+
+.link_menu{
+    font-size: 16px;
+    background-color: var(--verde);
+    text-decoration: none;
+    border: #392f5a;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 10px;
+    color: var(--azul_marinho);
+}
+
+:hover.link_menu{
+    background-color: var(--bege);
+    color: var(--azul_marinho);
+    /* transition-delay: 0.5s; */
+    transition: background-color 0.7s ease, transform 0.5s ease
+}
+
+.titulo{
+    background-color: var(--verde);
+    font-size: 28px;
+    align-items: right;
+    font-style: normal;
+}
+
+.botao_hamburguer{
+    background-color: var(--verde);
+}

@@ -35,15 +35,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Armazena os dados do usuário na sessão
             $_SESSION['id'] = $id;
             $_SESSION['email'] = $email;
-            echo "Login bem-sucedido! Bem-vindo, " . htmlspecialchars($email);
-            // Redirecionar ou carregar outra página
-            // header("Location: dashboard.php");
-            exit();
+
+            // Redireciona o usuário para a página desejada após login bem-sucedido
+            header("Location: http://localhost/login_cadastro/botao_cadastro/cadastro_animal.html");
+            exit(); // Termina a execução do script após o redirecionamento
         } else {
-            echo "Senha incorreta!";
+            // Caso a senha esteja incorreta, você pode exibir uma mensagem de erro
+            echo "<script>alert('Senha incorreta!');</script>";
         }
     } else {
-        echo "Email não encontrado!";
+        // Caso o email não seja encontrado, você pode exibir uma mensagem de erro
+        echo "<script>alert('Email não encontrado!');</script>";
     }
     
     $stmt->close();
