@@ -28,6 +28,7 @@ header{
     /* font-size: 25px; */
     font-family: 'Playfair Display  ';
     color: var(--azul_marinho);
+    border-bottom: 3px solid #333; 
 }
 
 .link_menu{

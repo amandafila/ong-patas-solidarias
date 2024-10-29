@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro_animal.css">
+    <title>Cadastro de animal</title>
+</head>
+<body>
+    <header>
+        <form action="" method="post"> 
+            <input type="image" src="image 2.png" width="55" height="50" class="botao_hamburguer"> 
+        </form>
+        <div class="titulo">PATAS SOLIDARIAS</div>
+        <a class="link_menu" href="https://wordmark.it/"> Menu principal </a>
+    </header>
+
+    <h2>Cadastro de animal</h2>
+    
+    <form class="perguntas" action="cadastroanimal.php" method="POST" enctype="multipart/form-data">
+        Nome: <input type="text" name="name" id="txtName" class="caixinhas" required> <br><br>
+        Tipo: <select name="selecione_tipo" id="tipo">
+            <option value="selecione_tipo">Selecione</option>
+            <option value="gato">Gato</option>
+            <option value="cachorro">Cachorro</option>
+        </select> <br><br>
+
+        Raça: <select name="selecione_raca" id="raca">
+            <option value="selecione_raca">Selecione</option>
+            <option value="golden">Golden</option>
+            <option value="pinscher">Pinscher</option>
+            <option value="persa">Persa</option>
+            <option value="siames">Siamês</option>
+            <option value="outra_raca">Outro</option>
+        </select> <br><br>
+
+        Temperamento: <select name="selecione_temperamento" id="temperamento">
+            <option value="selecione_temperamento">Selecione</option>
+            <option value="calmo">Calmo</option>
+            <option value="agitado">Agitado</option>
+            <option value="nervoso">Nervoso</option>
+            <option value="amigavel">Amigável</option>
+        </select> <br><br>
+
+        Porte: <select name="selecione_porte" id="porte">
+            <option value="selecione_porte">Selecione</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select> <br><br>
+
+        Idade: <input class="caixinhas" type="number" name="idade"> <br>
+
+        Necessita espaço? <br>
+        <input type="radio" value="Sim" name="espaco" id="sim">Sim
+        <input type="radio" value="Não" name="espaco" id="nao">Não <br>
+
+        Foto: <input type="file" name="foto" id="foto" accept="image/*"> <br>
+
+        Comentários: <input class="caixinhas" type="text" name="comentarios" size="30">
+
+        <input type="submit" class="cadastrar" name="submit" value="Enviar">
+    </form>
+</body>
+</html>

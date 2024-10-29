@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Select Dropdown</title>
+  <style>
+    /* Container for the custom dropdown */
+    .custom-select-container {
+      position: relative;
+      width: 200px;
+      margin: 20px;
+    }
+
+    /* Main display area for selected option */
+    .custom-select-display {
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Options container */
+    .custom-select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      z-index: 10;
+      background-color: #fff;
+    }
+
+    /* Option item styling */
+    .custom-select-option {
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .custom-select-option:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    /* Chevron icon */
+    .chevron {
+      font-size: 12px;
+      transition: transform 0.3s;
+    }
+    .rotate {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="custom-select-container">
+  <div class="custom-select-display" onclick="toggleDropdown()">
+    <span id="selected-option">Select an option</span>
+    <span class="chevron">&#9662;</span>
+  </div>
+  <div class="custom-select-options" id="options">
+    <div class="custom-select-option" onclick="selectOption('Option 1')">Option 1</div>
+    <div class="custom-select-option" onclick="selectOption('Option 2')">Option 2</div>
+    <div class="custom-select-option" onclick="selectOption('Option 3')">Option 3</div>
+  </div>
+</div>
+
+<script>
+  function toggleDropdown() {
+    const options = document.getElementById("options");
+    const chevron = document.querySelector(".chevron");
+    options.style.display = options.style.display === "block" ? "none" : "block";
+    chevron.classList.toggle("rotate");
+  }
+
+  function selectOption(option) {
+    document.getElementById("selected-option").textContent = option;
+    toggleDropdown(); // Close dropdown after selection
+  }
+
+  // Close dropdown if clicked outside
+  window.addEventListener("click", function(event) {
+    const container = document.querySelector(".custom-select-container");
+    if (!container.contains(event.target)) {
+      document.getElementById("options").style.display = "none";
+      document.querySelector(".chevron").classList.remove("rotate");
+    }
+  });
+</script>
+
+</body>
+</html>
